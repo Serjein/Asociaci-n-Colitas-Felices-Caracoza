@@ -1,0 +1,1442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: magicalstory;
+    src: url(../assets/fuentes/Blueberry\ Days.ttf);
+}
+
+#grilla {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: .5fr repeat(4, 1fr) .3fr;
+    grid-template-areas: "header header header header header header"
+        "main main main main article article"
+        "main main main main article article"
+        "main main main main article article"
+        "main main main main article article "
+        "footer footer footer footer footer footer";
+    grid-column-gap: .5em;
+    grid-row-gap: .5em;
+}
+
+/* Inicia header */
+
+header {
+    grid-area: header;
+    background: linear-gradient(180deg, #007991, #63d1b0);
+    display: flex;
+}
+
+header h1 {
+    flex-basis: 60%;
+}
+
+h1 {
+    color: white;
+    /* font-family: magicalstory; */
+    font-weight: 100;
+    font-family: 'Barlow', sans-serif;
+    font-size: 43px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 70px;
+}
+
+.animate__animated animate__rubberBand {
+    animation: animate__rubberBand;
+    animation-duration: 10s;
+}
+
+header img {
+    flex-basis: 10%;
+}
+
+#img-logo {
+    width: 190px;
+    height: 100px;
+}
+
+header nav {
+    flex-basis: 30%;
+}
+
+nav ul {
+
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 70px;
+}
+
+nav ul li {
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    padding: 3px;
+    list-style-type: none;
+}
+
+nav ul li:hover {
+    background: rgba(228, 116, 239, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 7px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+nav ul li a {
+    color: #781C68;
+    text-decoration: none;
+}
+
+/* Inicia main */
+
+#portada-index {
+    grid-area: main;
+    background: linear-gradient(90deg, #ee0979, #ff6a00);
+    margin-left: .5em;
+}
+
+#img-portada {
+    width: 100%;
+    height: 475px;
+}
+
+article {
+    grid-area: article;
+    background: linear-gradient(90deg, #ee0979, #ff6a00);
+    margin-right: .5em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr repeat(2, 1fr);
+    grid-template-areas: "div1 "
+        "div2 "
+        "div3 ";
+    grid-row-gap: .5em;
+}
+
+.div1 {
+    grid-area: div1;
+}
+
+#com-art {
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.div2 {
+    grid-area: div2;
+
+}
+
+.div3 {
+    grid-area: div3;
+
+}
+
+.img-art {
+    width: 97%;
+    height: 213px;
+    margin-left: 6px;
+    margin-top: .8px;
+}
+
+/* inicia footer */
+footer {
+    grid-area: footer;
+    background: linear-gradient(180deg, #63d1b0, #007991);
+}
+
+.redes-sociales {
+    height: 3vh;
+    margin-top: 6px;
+    margin-left: 5px;
+}
+
+
+/* inicia pagína quienes somos */
+
+#grilla-qs {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: .5fr repeat(4, 1fr) .3fr;
+    grid-template-areas: "header header header header header header"
+        "main main main main main main"
+        "main main main main main main"
+        "main main main main main main"
+        "main main main main main main"
+        "footer footer footer footer footer footer";
+    grid-column-gap: .5em;
+    grid-row-gap: .5em;
+}
+
+/* inicia main de pagina quienes somos */
+#main-qs {
+    grid-area: main;
+    background: rgb(7, 104, 247);
+    background: linear-gradient(292deg, rgba(7, 104, 247, 0.5689873361453957) 4%, rgba(196, 7, 247, 0.6502198291425945) 8%, rgba(236, 242, 79, 0.7930769719997374) 31%, rgba(231, 107, 107, 0.9079229103750875) 46%, rgba(30, 225, 240, 0.9051217899269083) 55%, rgba(122, 240, 98, 0.7706680084143032) 69%, rgba(220, 30, 240, 0.6502198291425945) 94%, rgba(240, 30, 30, 0.5913962997308299) 97%);
+    margin-right: 5px;
+    margin-left: 5px;
+    display: grid;
+    grid-template-columns: .5fr .5fr repeat(4, 1fr);
+    grid-template-rows: .2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "h2 h2 h2 video video video"
+        "texto texto texto video video video"
+        "texto texto texto video video video"
+        "texto texto texto video video video"
+        "texto texto texto video video video"
+        "texto texto texto video video video";
+}
+
+.h2-main {
+    grid-area: h2;
+    color: #610C63;
+    /* font-family: magicalstory; */
+    font-family: 'Barlow', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.texto-qs {
+    grid-area: texto;
+}
+
+.texto-quienes-somos {
+    /* font-family: magicalstory; */
+    font-family: 'Barlow', sans-serif;
+    font-size: 30px;
+    color: #070091;
+    margin-left: 50px;
+}
+
+.vid-quienes-somos {
+    grid-area: video;
+}
+
+.video-qs {
+    width: 450px;
+    height: 450px;
+    margin-top: 20px;
+    margin-left: 250px;
+}
+
+/* inicia página perritos en adopción */
+
+#grilla-pa {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: .5fr repeat(4, 1fr) .3fr;
+    grid-template-areas: "header header header header header header"
+        "main main main main main main"
+        "main main main main main main"
+        "main main main main main main"
+        "main main main main main main"
+        "footer footer footer footer footer footer";
+    grid-column-gap: .5em;
+    grid-row-gap: .5em;
+}
+
+.main-pa {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "h2 h2 h2 h2 h2 h2 h2 h2"
+        "card1 card1 card2 card2 card3 card3 card4 card4"
+        "card1 card1 card2 card2 card3 card3 card4 card4"
+        "card5 card5 card6 card6 card7 card7 card8 card8"
+        "card5 card5 card6 card6 card7 card7 card8 card8"
+        ". . . . . . . . "
+        ". . . . . . . . "
+        ". . . . . . . . ";
+    margin-left: .5em;
+    margin-right: .5em;
+    background: linear-gradient(to left, #FFD194, #D1913C);
+}
+
+h2 {
+    grid-area: h2;
+}
+
+.card1 {
+    grid-area: card1;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card6 {
+    grid-area: card6;
+}
+
+.card7 {
+    grid-area: card7;
+}
+
+.card8 {
+    grid-area: card8;
+}
+
+.card {
+    margin-top: 5px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 180px;
+    height: 154px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(180px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+    margin-left: 0;
+}
+
+.card .back {
+    transform: perspective(180px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px white;
+    height: 30px;
+    line-height: 30px;
+}
+
+.card .back .link a {
+    color: white;
+}
+
+.card .back h3 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: white;
+    margin-left: 0;
+}
+
+.card .back ul {
+    text-align: justify;
+    margin-left: 10px;
+}
+
+.card ul li {
+    letter-spacing: 1px;
+}
+
+.card:hover .front {
+    transform: perspective(180px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(180px) rotateY(360deg);
+}
+
+/* inicia pagina Donar */
+
+#main-donar {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas: "h2 h2 h2 h2"
+        "h3 h3 img-dep img-dep"
+        "texto1 texto1 img-dep img-dep"
+        "numero1 numero1 img-dep img-dep"
+        "texto2 texto2 img-dep img-dep"
+        "texto3 texto3 img-dep img-dep"
+        "numero2 numero2 img-dep img-dep"
+        ". . img-dep img-dep"
+        ". . img-dep img-dep";
+    font-family: 'Barlow', sans-serif;
+    background: linear-gradient(to left, #FFD194, #D1913C);
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+.h2-donar {
+    grid-area: h2;
+}
+
+#h3-deposito {
+    grid-area: h3;
+    color: rgb(248, 52, 3);
+    font-size: 25px;
+    font-weight: 900;
+    margin-left: 150px;
+}
+
+#texto-deposito {
+    grid-area: texto1;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 250px;
+}
+
+#numero-deposito {
+    grid-area: numero1;
+    color: rgb(23, 7, 252);
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 200px;
+}
+
+#texto-deposito2 {
+    grid-area: texto2;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 120px;
+}
+
+#texto-deposito3 {
+    grid-area: texto3;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 20px;
+}
+
+#numero-deposito2 {
+    grid-area: numero2;
+    color: rgb(23, 7, 252);
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 200px;
+}
+
+#img-deposito {
+    grid-area: img-dep;
+}
+
+#img-deposito img {
+    width: 675px;
+    height: 400px;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+/* inicia pagina contactos */
+
+
+nav ul li {
+    font-size: 13px;
+}
+
+#main-contacto {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: .2fr .5fr 1fr;
+    grid-template-areas: "h2 h2"
+        "datos mapa"
+        "datos mapa";
+    background: linear-gradient(to left, #FFD194, #D1913C);
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+h2 {
+    grid-area: h2;
+}
+
+form {
+    grid-area: datos;
+    font-family: 'Barlow', sans-serif;
+}
+
+iframe {
+    grid-area: mapa;
+}
+
+.datos-contacto {
+    font-family: 'Barlow', sans-serif;
+    color: #610C63;
+    border: 1px solid #53D7A8;
+    margin-left: 10px;
+    margin-right: 300px;
+    border-radius: 7px;
+}
+
+h3 {
+    color: #6f0000;
+    font-family: 'Barlow', sans-serif;
+    margin-left: 20px;
+}
+
+
+.datos-contacto__label {
+    margin-left: 20px;
+}
+
+textarea {
+    border-radius: 7px;
+}
+
+#enviar {
+    background-color: #118897;
+    color: white;
+    padding: 2px;
+    border: 1px solid #118897;
+    border-radius: 7px;
+    margin-left: 20px;
+}
+
+#enviar:hover {
+    background-color: #9146c7;
+}
+
+#limpiar {
+    background-color: #118897;
+    color: white;
+    padding: 2px;
+    border: 1px solid #118897;
+    border-radius: 7px;
+    /* margin-left: 435px; */
+}
+
+#limpiar:hover {
+    background-color: #9146c7;
+}
+
+iframe {
+    margin-left: 200px;
+}
+
+
+/* inicia media query */
+
+@media only screen and (max-width: 1200px) {
+
+    /* inicia media de index */
+
+    header h1 {
+        flex-basis: 40%;
+    }
+
+    header img {
+        flex-basis: 10%;
+    }
+
+    header nav {
+        flex-basis: 50%;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-left: 5px;
+    }
+
+
+    nav ul li a {
+        font-size: 19px;
+        font-weight: 600;
+        padding: 3px;
+    }
+
+    #img-portada {
+        width: 100%;
+        height: 850px;
+    }
+
+    #com-art {
+        font-size: 23px;
+    }
+
+    .img-art {
+        width: 97%;
+        height: 400px;
+        margin-left: 6px;
+        margin-top: .8px;
+    }
+
+    /* inicia media 1200 página quiénes somos */
+
+    .h2-main {
+        font-size: 50px;
+    }
+
+    .texto-quienes-somos {
+        font-family: 'Barlow', sans-serif;
+        font-size: 45px;
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    .video-qs {
+        width: 500px;
+        height: 500px;
+        margin-top: 200px;
+        margin-left: 110px;
+    }
+
+    /* inicia media 1200 de página perritos en adopción  */
+
+    .main-pa {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: .3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "h2 h2 h2 h2 h2 h2"
+            "card1 card1 card2 card2 card3 card3"
+            "card1 card1 card2 card2 card3 card3"
+            "card4 card4 card5 card5 card6 card6"
+            "card4 card4 card5 card5 card6 card6"
+            "card7 card7 card8 card8 . ."
+            "card7 card7 card8 card8 . ."
+            ". . . . . .  ";
+    }
+
+    .h2-main {
+        font-size: 50px;
+        margin-bottom: 70px;
+    }
+
+    /* inicia media 1200 de página donativos */
+
+    #h3-deposito {
+        font-size: 30px;
+        margin-left: 110px;
+    }
+
+    #texto-deposito {
+        font-size: 25px;
+        margin-left: 235px;
+    }
+
+    #numero-deposito {
+        font-size: 25px;
+        margin-left: 180px;
+    }
+
+    #texto-deposito2 {
+        font-size: 25px;
+    }
+
+    #texto-deposito3 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    #numero-deposito2 {
+        font-size: 25px;
+        margin-left: 180px;
+    }
+
+    #img-deposito img {
+        width: 580px;
+        height: 550px;
+    }
+
+    /* inicia media 1200 página contacto */
+
+    #h3-datos {
+        font-size: 35px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    input {
+        font-size: 25px;
+    }
+
+    .datos-contacto__label {
+        margin-left: 20px;
+    }
+
+    textarea {
+        font-size: 25px;
+        border-radius: 7px;
+    }
+
+    #enviar {
+        font-size: 25px;
+        margin-left: 30px;
+    }
+
+    #limpiar {
+        font-size: 25px;
+    }
+
+    iframe {
+        width: 460px;
+        height: 600px;
+    }
+}
+
+/* inicia media 1023 y 1024 */
+
+@media only screen and (max-width: 1023px),
+screen and (max-width:1024px) {
+
+    h1 {
+        font-size: 35px;
+        margin-left: 5px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    #img-portada {
+        height: 850px;
+    }
+
+    #com-art {
+        font-size: 25px;
+    }
+
+    .img-art {
+        height: 398px;
+    }
+
+    /* inicia media 1023 y 24 de página quienes somos */
+
+    .h2-main {
+        font-size: 45px;
+    }
+
+    .texto-quienes-somos {
+        font-family: 'Barlow', sans-serif;
+        font-size: 39px;
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    .video-qs {
+        width: 490px;
+    }
+
+    /* inicia media 1023 y 24 de página donativos */
+
+    #h3-deposito {
+        font-size: 28px;
+        margin-left: 85px;
+    }
+
+    #texto-deposito {
+        font-size: 25px;
+        margin-left: 190px;
+    }
+
+    #numero-deposito {
+        font-size: 25px;
+        margin-left: 125px;
+    }
+
+    #texto-deposito2 {
+        font-size: 25px;
+        text-align: center;
+        margin-left: 50px;
+    }
+
+    #texto-deposito3 {
+        font-size: 25px;
+        text-align: center;
+        margin-left: 30px;
+    }
+
+    #numero-deposito2 {
+        font-size: 25px;
+        margin-left: 125px;
+    }
+
+    #img-deposito img {
+        width: 500px;
+        height: 550px;
+    }
+
+    /* inicia media 1023 y 24 de página contacto */
+
+    #h3-datos {
+        font-size: 33px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    input {
+        font-size: 20px;
+    }
+
+    .datos-contacto__label {
+        margin-left: 20px;
+    }
+
+    textarea {
+        font-size: 20px;
+        border-radius: 7px;
+    }
+
+    #enviar {
+        font-size: 22px;
+        margin-left: 30px;
+    }
+
+    #limpiar {
+        font-size: 22px;
+    }
+
+    iframe {
+        width: 380px;
+        height: 600px;
+    }
+
+}
+
+/* inicia media 768 */
+
+@media only screen and (max-width: 768px) {
+
+    header{
+        grid-area: header;
+        display: grid;
+        grid-template-columns:  1fr;
+        grid-template-rows: .3fr .5fr .2fr;
+        grid-template-areas: "img"
+        "h1"
+        "nav";
+        justify-items: center;
+    }
+    #img-logo {
+        grid-area: img;
+        width: 150px;
+        height: 120px;
+        margin-top: 15px;
+    }
+
+    h1 {
+grid-area: h1;
+        font-size: 45px;
+        margin-left: 5px;
+    }
+
+nav ul li a {
+        grid-area: nav;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    #img-portada {
+        height: 650px;
+    }
+    #com-art {
+        font-size: 25px;
+    }
+    .img-art {
+        width: 96%;
+        height: 295px;
+    }
+    /* inicia media 768 página quienes somos */
+
+    #main-qs {
+        grid-area: main;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 1fr 1fr 1fr;
+        grid-template-areas: "h2 h2 h2 h2"
+            "texto texto texto texto"
+            "texto texto texto texto"
+            "video video video video";
+        grid-column-gap: .5em;
+            }
+    .h2-main {
+        font-size: 30px;
+       margin-bottom: 10px;
+    }
+    .texto-quienes-somos {
+       font-size: 25px;
+        margin-top: 0;
+    }
+    .video-qs {
+        width: 330px;
+        height: 350px;
+        margin-left: 200px; 
+    }
+  /* inicia media 768 página perritos en adopción */
+
+  .card {
+    margin-top: 15px;
+    margin-left: 30px;
+    }
+ /* inicia media 768 página donativos */
+
+ #main-donar {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(7, .3fr) repeat(2, 1fr);
+    grid-template-areas: "h2 h2 h2 h2"
+        "h3 h3 h3 h3"
+        "texto1 texto1 texto1 texto1"
+        "numero1 numero1 numero1 numero1"
+        "texto2 texto2 texto2 texto2"
+        "texto3 texto3 texto3 texto3"
+        "numero2 numero2 numero2 numero2"
+        " img-dep img-dep img-dep img-dep"
+        " img-dep img-dep img-dep img-dep";
+}
+#h3-deposito {
+    font-size: 28px;
+    margin-bottom: 15px;
+    margin-left: 170px;
+   }
+ 
+ #texto-deposito {
+   font-size: 25px;
+   color: #067f93;
+    margin-left: 310px;
+ }
+ 
+ #numero-deposito {
+    font-size: 25px;
+      margin-left: 260px;
+   }
+ 
+ #texto-deposito2 {
+    font-size: 25px;
+    color: #067f93;
+  margin-left: 5px;
+    }
+ 
+ #texto-deposito3 {
+    font-size: 25px;
+    color: #067f93;
+   margin-left: 10px;
+ }
+ 
+ #numero-deposito2 {
+    font-size: 25px;
+    margin-left: 260px;
+}
+ #img-deposito img {
+     width: 400px;
+     height: 340px;
+     margin-left: 90px;
+}
+/* inicia media 768 página contacto */
+
+textarea {
+    font-size: 19px;
+    border-radius: 7px;
+}
+
+iframe {
+    width: 300px;
+    height: 580px;
+    margin-left: 50px;
+}
+}
+
+/* inicia media 600 */
+
+@media only screen and (max-width: 600px) {
+
+    nav ul li a {
+         font-size: 20px;
+         padding: 2px;
+    }
+    #img-portada {
+        height: 660px;
+    }
+    #com-art {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .img-art {
+        width: 96%;
+        height: 240px;
+    }
+     /* inicia media 600 página quienes somos */
+
+     .video-qs {
+        width: 330px;
+        height: 350px;
+        margin-left: 130px; 
+    }
+     /* inicia media 600 página perritos en adopción */
+
+    
+     .main-pa {
+        grid-area: main;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: .3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "h2 h2 h2 h2"
+            "card1 card1 card2 card2 "
+            "card1 card1 card2 card2 "
+            "card3 card3 card4 card4 "
+            "card3 card3 card4 card4 "
+            "card5 card5 card6 card6 "
+            "card5 card5 card6 card6 "
+            "card7 card7 card8 card8 "
+            "card7 card7 card8 card8 "
+            ;
+    }
+
+     .card {
+        margin-top: 20px;
+        position: relative;
+        width: 240px;
+        height: 113px;
+    }
+    .card .front {
+        transform: perspective(160px) rotateY(0deg);
+    }
+    .card .front h3 {
+        height: 25px;
+    }
+    .card .back {
+        transform: perspective(160px) rotateY(180deg);
+    }
+    .card .back .link {
+        height: 20px;
+    }
+    .card .back h3 {
+        font-size: 14px;
+        margin-top: 0;
+    }
+    .card:hover .front {
+        transform: perspective(160px) rotateY(180deg);
+    }
+    .card:hover .back {
+        transform: perspective(160px) rotateY(360deg);
+    }
+    /* inicia media 600 Donativos */
+    
+    #h3-deposito {
+        font-size: 28px;
+        margin-bottom: 15px;
+        margin-left: 100px;
+       }
+     
+     #texto-deposito {
+       font-size: 25px;
+       color: #067f93;
+        margin-left: 210px;
+     }
+     
+     #numero-deposito {
+        font-size: 25px;
+          margin-left: 160px;
+       }
+     
+     #texto-deposito2 {
+        font-size: 25px;
+        color: #067f93;
+      margin-left: 5px;
+        }
+     
+     #texto-deposito3 {
+        font-size: 25px;
+        color: #067f93;
+       margin-left: 10px;
+     }
+     
+     #numero-deposito2 {
+        font-size: 25px;
+        margin-top: 10px;
+        margin-left: 160px;
+    }
+     #img-deposito img {
+         width: 370px;
+         height: 290px;
+         margin-left: 50px;
+    }
+     /* inicia media 600 contacto */
+
+     .h2-main{
+        margin-bottom: 0;
+     }
+
+     #h3-datos {
+        font-size: 33px;
+        margin-top: 0;
+       margin-bottom:5px;
+    }
+     
+     textarea {
+        font-size: 17px;
+        border-radius: 7px;
+    }
+    
+  iframe {
+        width: 170px;
+        height: 500px;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+}
+/* inicia media 480 */
+
+@media only screen and (max-width: 480px) {
+
+    
+    #img-logo {
+        grid-area: img;
+        width: 130px;
+        height: 120px;
+        margin-top: 15px;
+    }
+
+    h1 {
+grid-area: h1;
+        font-size: 35px;
+        margin-left: 5px;
+    }
+
+nav ul li a {
+        grid-area: nav;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 1px;
+    }
+   
+    .div1{
+        grid-area: div1;
+    }
+    .div2{
+        grid-area: div2;
+    }
+    .div3{
+        grid-area: div3;
+    }
+    #img-portada {
+        height: 660px;
+    }
+    #com-art {
+        font-size: 25px;
+    }
+    .img-art {
+        width: 140px;
+        height: 200px;
+    }
+     /* inicia media 480 página quienes somos */
+
+     .h2-main {
+      margin-bottom: 15px;
+    }
+     .video-qs {
+        width: 300px;
+        height: 280px;
+        margin-left: 100px; 
+    }
+    /* inicia media 480 página perritos en adopción */
+
+     .card {
+        margin-top: 20px;
+        position: relative;
+        width: 180px;
+        height: 113px;
+    }
+     /* inicia media 480 Donativos */
+    
+     #h3-deposito {
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 25px;
+        margin-left: 50px;
+       }
+     
+     #texto-deposito {
+        font-size: 20px;
+       color: #067f93;
+        margin-left: 170px;
+     }
+     
+     #numero-deposito {
+        font-size: 20px;
+          margin-left: 120px;
+       }
+     
+     #texto-deposito2 {
+        font-size: 20px;
+        color: #067f93;
+      margin-left: 5px;
+        }
+     
+     #texto-deposito3 {
+        font-size: 20px;
+        color: #067f93;
+       margin-left: 10px;
+     }
+     
+     #numero-deposito2 {
+        font-size: 20px;
+        margin-top: 15px;
+        margin-left: 120px;
+    }
+     #img-deposito img {
+         width: 370px;
+         height: 250px;
+         margin-top: 50px;
+         margin-left: 20px;
+    }
+ /* inicia media 480 Contacto */
+
+#main-contacto {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: .2fr .5fr 1fr 1fr 1fr;
+    grid-template-areas: "h2 h2"
+        "datos datos"
+        "datos datos"
+        "datos datos"
+        "mapa mapa";
+    background: linear-gradient(to left, #FFD194, #D1913C);
+    margin-left: .5em;
+    margin-right: .5em;
+}
+.h2-main{
+    margin-bottom: 10px;
+ }
+
+ #h3-datos {
+    font-size: 33px;
+    margin-top: 10px;
+   margin-bottom:5px;
+}
+ 
+ textarea {
+    font-size: 17px;
+    border-radius: 7px;
+}
+
+iframe {
+    width: 440px;
+    height: 160px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+}
+/* inicia media 320 */
+
+@media only screen and (max-width: 320px) {
+
+    
+    #img-logo {
+        grid-area: img;
+        width: 130px;
+        height: 120px;
+        margin-top: 15px;
+    }
+
+    h1 {
+grid-area: h1;
+        font-size: 35px;
+        margin-left: 5px;
+    }
+
+nav ul li a {
+        grid-area: nav;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 1px;
+    }
+   
+/* #portada-index{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "portada portada"
+    "portada portada"
+    "comunicado comunicado" ;
+}   
+
+#portada-index__img{
+    grid-area: portada;
+}
+#comunicados{
+    grid-area: comunicado;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "div1 div1"
+    "div2 div3"
+    "div2 div3"; 
+} */
+
+    .div1{
+        grid-area: div1;
+    }
+    .div2{
+        grid-area: div2;
+    }
+    .div3{
+        grid-area: div3;
+    }
+    #img-portada {
+        height: 500px;
+    }
+    #com-art {
+        font-size: 25px;
+    }
+    .img-art {
+        width: 140px;
+        height: 50px;
+    }
+/* inicia media 480 página quienes somos */
+
+  
+#img-logo {
+    grid-area: img;
+    width: 130px;
+    height: 100px;
+    margin-top: 15px;
+}
+
+h1 {
+grid-area: h1;
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+nav ul li a {
+    grid-area: nav;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 1px;
+}
+.h2-main {
+    font-size: 25px;
+   margin-bottom: 20px;
+}
+.texto-quienes-somos {
+   font-size: 20px;
+    margin-top: 0;
+    margin-left: 0;
+}
+       .video-qs {
+          width: 300px;
+          height: 260px;
+          margin-left: 10px; 
+      }
+       /* inicia media 320 página perritos en adopción */
+
+     .card {
+        margin-top: 20px;
+        position: relative;
+        width: 100px;
+        height: 105px;
+    }
+
+     /* inicia media 320 Donativos */
+    
+     #h3-deposito {
+        font-size: 20px;
+        
+        margin-left: 5px;
+       }
+     
+     #texto-deposito {
+        font-size: 20px;
+        margin-left: 100px;
+     }
+     
+     #numero-deposito {
+        font-size: 20px;
+          margin-left: 60px;
+       }
+     
+     #texto-deposito2 {
+        font-size: 20px;
+       margin-left: 5px;
+        }
+     
+     #texto-deposito3 {
+        font-size: 20px;
+        margin-top: 10px;
+       margin-left: 10px;
+     }
+     
+     #numero-deposito2 {
+        font-size: 20px;
+        margin-top: 15px;
+        margin-left: 60px;
+    }
+     #img-deposito img {
+         width: 300px;
+         height: 230px;
+         margin-top: 50px;
+         margin-left: 0 ;
+    }
+/* inicia media 320 Contacto */
+
+ #h3-datos {
+    font-size: 20px;
+    margin-top: 10px;
+   margin-bottom:5px;
+}
+.datos-contacto__label{
+    font-size: 20px;   
+}
+ 
+ textarea {
+    font-size: 13.5px;
+    border-radius: 7px;
+}
+#enviar{
+    font-size: 20px;
+}
+#limpiar{ 
+    font-size: 20px;
+}
+
+iframe {
+    width: 285px;
+    height: 150px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+}
