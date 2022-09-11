@@ -89,6 +89,13 @@ nav ul li a {
     padding: 3px;
 }
 
+.nav__label,
+.nav__input {
+    display: none;
+    filter: invert(1);
+}
+
+
 /* Inicia main */
 
 #portada-index {
@@ -207,7 +214,7 @@ footer {
 .h2-main {
     grid-area: h2;
     color: #610C63;
-   
+
     font-family: 'Barlow', sans-serif;
     font-size: 35px;
     font-weight: 700;
@@ -221,7 +228,7 @@ footer {
 }
 
 .texto-quienes-somos {
-    
+
     font-family: 'Barlow', sans-serif;
     font-size: 30px;
     color: #070091;
@@ -621,7 +628,7 @@ iframe {
         font-weight: 600;
         padding: 3px;
     }
-    
+
     .h2-main {
         font-size: 50px;
     }
@@ -744,7 +751,7 @@ screen and (max-width:1024px) {
 
     nav ul li a {
         font-size: 17px;
-}
+    }
 
     #img-portada {
         height: 870px;
@@ -884,7 +891,7 @@ screen and (max-width:1024px) {
         font-size: 23px;
         font-weight: 600;
         padding: 3px;
-        }
+    }
 
     #img-portada {
         height: 650px;
@@ -917,7 +924,7 @@ screen and (max-width:1024px) {
         font-size: 28px;
         font-weight: 600;
         padding: 3px;
-        }
+    }
 
     .h2-main {
         font-size: 30px;
@@ -942,7 +949,7 @@ screen and (max-width:1024px) {
         font-size: 25px;
         font-weight: 600;
         padding: 3px;
-        } 
+    }
 
     .card {
         margin-top: 15px;
@@ -957,7 +964,7 @@ screen and (max-width:1024px) {
         font-size: 25px;
         font-weight: 600;
         padding: 3px;
-        } 
+    }
 
     #main-donar {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1031,13 +1038,51 @@ screen and (max-width:1024px) {
 
 @media only screen and (max-width: 600px) {
 
+    h1{
+        margin-top: 0;
+        margin-bottom: 20px;
+    } 
+
     nav ul li a {
-        font-size: 20px;
+        font-size: 30px;
         padding: 2px;
     }
+    nav ul li{
+        padding: 5px;
+    }
+    .img-hamb{
+        width: 40px;
+        height: 40px;        
+            }
+            .main-menu {
+                align-items: center;
+                padding: 18px;
+                margin-top: 3px;
+                margin-left: 270px;
+                background-color:#F2D1D1;
+                position: absolute;
+                z-index: 1;
+            }
+        
+            .nav__label {
+                display: block;
+                cursor: pointer;
+                margin-left: 550px;
+            }
+        
+            .main-menu {
+                position: fixed;
+                flex-direction: column;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+               transition: clip-path 1s ease-in-out;
+               }
+        
+            .nav__input:checked+.main-menu {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                }
 
     #img-portada {
-        height: 660px;
+        height: 700px;
     }
 
     #com-art {
@@ -1047,7 +1092,7 @@ screen and (max-width:1024px) {
 
     .img-art {
         width: 96%;
-        height: 240px;
+        height: 260px;
     }
 
     /* inicia media 600 página quienes somos */
@@ -1185,8 +1230,7 @@ screen and (max-width:1024px) {
 
 @media only screen and (max-width: 480px) {
 
-
-    header {
+header {
         grid-area: header;
         display: grid;
         grid-template-columns: 1fr;
@@ -1201,20 +1245,55 @@ screen and (max-width:1024px) {
         grid-area: img;
         width: 150px;
         height: 120px;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     h1 {
         grid-area: h1;
-        font-size: 25px;
+        font-size: 35px;
+        margin-top: 0;
         margin-left: 5px;
+        margin-bottom: 20px;
     }
 
     nav ul li a {
         grid-area: nav;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 600;
+    margin-bottom: 10px;    
     }
+    nav ul li{
+        padding: 3px;
+    }
+    .img-hamb{
+width: 30px;
+height: 30px;        
+    }
+    .main-menu {
+        align-items: center;
+        padding: 18px;
+        margin-top: 3px;
+        margin-left: 250px;
+        background-color:#F2D1D1;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .nav__label {
+        display: block;
+        cursor: pointer;
+        margin-left: 440px;
+    }
+
+    .main-menu {
+        position: fixed;
+        flex-direction: column;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+       }
+
+    .nav__input:checked+.main-menu {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
 
     #portada-index {
         display: grid;
@@ -1233,7 +1312,7 @@ screen and (max-width:1024px) {
     #img-portada {
         grid-area: portada;
         width: 100%;
-        height: 330px;
+        height: 355px;
     }
 
     #comunicados {
@@ -1251,7 +1330,7 @@ screen and (max-width:1024px) {
 
     .img-art {
         width: 96%;
-        height: 135px;
+        height: 150px;
     }
 
     /* inicia media 480 página quienes somos */
@@ -1359,6 +1438,7 @@ screen and (max-width:1024px) {
         margin-left: 10px;
     }
 }
+
 /* inicia media 320 */
 
 @media only screen and (max-width: 320px) {
@@ -1389,9 +1469,34 @@ screen and (max-width:1024px) {
 
     nav ul li a {
         grid-area: nav;
-        font-size: 15px;
+        font-size: 22px;
         font-weight: 600;
     }
+
+    .main-menu {
+        align-items: center;
+        margin-top: 0;
+        margin-left: 130px;
+        background-color:#F2D1D1;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .nav__label {
+        display: block;
+        cursor: pointer;
+        margin-left: 280px;
+    }
+
+    .main-menu {
+        position: fixed;
+        flex-direction: column;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+
+    .nav__input:checked + .main-menu {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
 
     #portada-index {
         display: grid;
@@ -1404,13 +1509,12 @@ screen and (max-width:1024px) {
         grid-column-gap: .5em;
         grid-row-gap: .5em;
         margin-right: .5em;
-
-    }
+}
 
     #img-portada {
         grid-area: portada;
         width: 100%;
-        height: 270px;
+        height: 343px;
     }
 
     #comunicados {
@@ -1447,12 +1551,17 @@ screen and (max-width:1024px) {
         margin-left: 5px;
     }
 
+    nav ul li {
+        padding: 3px;
+    }
+
     nav ul li a {
         grid-area: nav;
         font-size: 15px;
-        font-weight: 600;
+        font-weight: 800;
         padding: 1px;
-    }
+        color: #781C68;
+        }
 
     .h2-main {
         font-size: 25px;
