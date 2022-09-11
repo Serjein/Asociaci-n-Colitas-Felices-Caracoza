@@ -45,7 +45,7 @@ h1 {
 
 .animate__animated animate__rubberBand {
     animation: animate__rubberBand;
-    animation-duration: 10s;
+    animation-duration: 60s;
 }
 
 header img {
@@ -207,7 +207,7 @@ footer {
 .h2-main {
     grid-area: h2;
     color: #610C63;
-    /* font-family: magicalstory; */
+   
     font-family: 'Barlow', sans-serif;
     font-size: 35px;
     font-weight: 700;
@@ -221,7 +221,7 @@ footer {
 }
 
 .texto-quienes-somos {
-    /* font-family: magicalstory; */
+    
     font-family: 'Barlow', sans-serif;
     font-size: 30px;
     color: #070091;
@@ -479,8 +479,6 @@ h2 {
 #img-deposito img {
     width: 675px;
     height: 400px;
-    /* display: flex;
-    flex-wrap: wrap; */
 }
 
 /* inicia pagina contactos */
@@ -559,7 +557,6 @@ textarea {
     padding: 2px;
     border: 1px solid #118897;
     border-radius: 7px;
-    /* margin-left: 435px; */
 }
 
 #limpiar:hover {
@@ -747,8 +744,7 @@ screen and (max-width:1024px) {
 
     nav ul li a {
         font-size: 17px;
-
-    }
+}
 
     #img-portada {
         height: 870px;
@@ -885,7 +881,7 @@ screen and (max-width:1024px) {
 
     nav ul li a {
         grid-area: nav;
-        font-size: 25px;
+        font-size: 23px;
         font-weight: 600;
         padding: 3px;
         }
@@ -941,12 +937,27 @@ screen and (max-width:1024px) {
 
     /* inicia media 768 página perritos en adopción */
 
+    nav ul li a {
+        grid-area: nav;
+        font-size: 25px;
+        font-weight: 600;
+        padding: 3px;
+        } 
+
     .card {
         margin-top: 15px;
         margin-left: 30px;
     }
 
+
     /* inicia media 768 página donativos */
+
+    nav ul li a {
+        grid-area: nav;
+        font-size: 25px;
+        font-weight: 600;
+        padding: 3px;
+        } 
 
     #main-donar {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1348,6 +1359,7 @@ screen and (max-width:1024px) {
         margin-left: 10px;
     }
 }
+/* inicia media 320 */
 
 @media only screen and (max-width: 320px) {
 
